@@ -1,5 +1,6 @@
 radio.onReceivedNumber(function (receivedNumber) {
-	
+    動く(receivedNumber, receivedNumber)
+    basic.showNumber(Math.trunc(receivedNumber / 10))
 })
 function 動く (右タイヤ: number, 左タイヤ: number) {
     if (右タイヤ >= 0) {
@@ -31,9 +32,6 @@ function 動く (右タイヤ: number, 左タイヤ: number) {
     pins.analogWritePin(AnalogPin.P13, P13_PWM)
     pins.analogWritePin(AnalogPin.P16, P16_PWM)
 }
-radio.onReceivedValue(function (name, value) {
-	
-})
 let P16_PWM = 0
 let P13_PWM = 0
 let 動く左 = 0
