@@ -1,6 +1,5 @@
 radio.onReceivedNumber(function (receivedNumber) {
     動く(receivedNumber, receivedNumber)
-    basic.showNumber(Math.trunc(receivedNumber / 10))
 })
 function 動く (右タイヤ: number, 左タイヤ: number) {
     if (右タイヤ >= 0) {
@@ -36,5 +35,11 @@ let P16_PWM = 0
 let P13_PWM = 0
 let 動く左 = 0
 let 動く右 = 0
-radio.setGroup(4)
+if (input.buttonIsPressed(Button.A)) {
+    radio.setGroup(3)
+    basic.showNumber(3)
+} else {
+    radio.setGroup(4)
+    basic.showNumber(4)
+}
 動く(0, 0)
